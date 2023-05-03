@@ -9,6 +9,11 @@ epsilon = 0.0001 #setting our error
 
 x0=0
 def newton(a,b):
+    #checking if function has oposite signs in points a and b
+    if f.subs(x,a)*f.subs(x,b) >= 0:
+        print("funkcja nie przyjmuje różnych znaków na końcach przedziału")
+        return
+    #function
     #finding starting point
     dx2=lambdify(x,diff(f,x,2))
     dx=lambdify(x,diff(f,x))
