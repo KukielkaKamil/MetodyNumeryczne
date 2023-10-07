@@ -1,20 +1,20 @@
 from sympy import *
 
-x=symbols('x') #declaring symbols of your function
+x=symbols('x')
 
-#declaring your function. '**' stands for '^'
+#Deklarowanie wzoru twojej funkcji. '**' oznacza potęgowanie
 f=(x+1) * (x-1)**4
 
-epsilon = 0.0001 #setting our error
+epsilon = 0.0001 #Margines błędu
 
 x0=0
 def newton(a,b):
-    #checking if function has oposite signs in points a and b
+    #Sprawdzanie czy funkcja ma przeciwne znaki w punktach a i b
     if f.subs(x,a)*f.subs(x,b) >= 0:
         print("funkcja nie przyjmuje różnych znaków na końcach przedziału")
         return
-    #function
-    #finding starting point
+    #Metoda włąściwa
+    #Szukanie punktu początkowego
     dx2=lambdify(x,diff(f,x,2))
     dx=lambdify(x,diff(f,x))
     if f.subs(x,a)*dx2(a)>0:

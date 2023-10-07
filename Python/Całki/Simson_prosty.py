@@ -1,8 +1,8 @@
 from sympy import *
 
-x = symbols('x') #declaring symbols of your function
+x = symbols('x')
 
-#declaring your function. '**' stands for '^'
+#Deklarowanie wzoru twojej funkcji. '**' oznacza potęgowanie
 f = x**2
 
 def simpson(a,b):

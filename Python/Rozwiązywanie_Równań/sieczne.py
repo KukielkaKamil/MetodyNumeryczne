@@ -1,18 +1,18 @@
 from sympy import *
 
-x=symbols('x') #declaring symbols of your function
+x=symbols('x')
 
-#declaring your function. '**' stands for '^'
+#Sprawdzanie czy funkcja ma przeciwne znaki w punktach a i b
 f=lambda x:(x+1) * (x-1)**4
 
-epsilon = 0.0001 #setting our error
+epsilon = 0.0001 #Margines błędu
 
 def sieczne(a,b):
-    #checking if function has oposite signs in points a and b
+    #Sprawdzanie czy funkcja ma przeciwne znaki w punktach a i b
     if f(a)*f(b) >= 0:
         print("funkcja nie przyjmuje różnych znaków na końcach przedziału")
         return
-    #function
+    #Metoda włąściwa
     c=(a+b)/2
     x0 = a
     x1 = b

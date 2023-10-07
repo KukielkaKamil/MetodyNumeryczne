@@ -1,11 +1,11 @@
 from sympy import *
 
-x=symbols('x') #declaring symbols of your function
+x=symbols('x')
 
-#declaring your function. '**' stands for '^'
+#Deklarowanie wzoru twojej funkcji. '**' oznacza potęgowanie
 f=lambda x:(x+1) * (x-1)**4
 
-epsilon = 0.001 #setting our error
+epsilon = 0.001 #Margines błędu
 
 def bisection(a,b):
     iterations = 0

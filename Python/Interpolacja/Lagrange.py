@@ -24,7 +24,7 @@ for iter in range(len(wenz)):
     funk += wenz[iter][1]* (lambd_up[iter]/lambd_down[iter])
 
 wyn = simplify(funk)
-print(wyn)
+pretty_print(wyn)
 
 
         
